@@ -29,6 +29,11 @@ header
 
 }
 
+figcaption
+{
+    font-size: 20px;
+}
+
 .middle
 {
     display:flex;
@@ -67,19 +72,24 @@ header
 
 .button
 {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    flex-wrap: wrap;
+    font-size:80px;
     width:160px;
     height:160px;
-    background-color: red;
-    border:1px solid white;
+  
 }
 
 .winner
 {
-    width:260px;
-    margin-top:190px;
     background-color: black;
     border:none;
 }
+
+
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) 
