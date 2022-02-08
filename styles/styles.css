@@ -4,10 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html,body
+{
+    height: 100%;
+}
 body
 {
     background-color:black;
+    height:100%;
 }
 
 p
@@ -34,6 +38,11 @@ figcaption
     font-size: 20px;
 }
 
+.icon
+{
+    width: 190px;
+}
+
 .middle
 {
     display:flex;
@@ -43,7 +52,6 @@ figcaption
 
 .scoreH, .scoreC
 {
-    gap:2.5px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -65,8 +73,8 @@ figcaption
     flex-direction: row;
     justify-content:center;
     flex-wrap:wrap;
-    width:600px;
-    padding-top:40px;
+    width:790px;
+    padding-top:115px;
     color:white;
 }
 
@@ -78,21 +86,28 @@ figcaption
     justify-content:center;
     flex-wrap: wrap;
     font-size:80px;
-    width:160px;
-    height:160px;
+    width:210px;
+    height:210px;
+    border-radius: 50%;
   
 }
 
 .winner
 {
+    width: 170px;
     background-color: black;
     border:none;
+    margin:25px;
+}
+
+.winner .icon
+{
+    width: 100px;
 }
 
 
-
 /* Mobile Styles */
-@media only screen and (max-width: 400px) 
+@media only screen and (max-width: 430px) 
 {
     header
     {
@@ -104,7 +119,7 @@ figcaption
 
     .scoreC, .scoreH
     {
-        font-size:65px;
+        font-size:90px;
         border-bottom:5px solid white;
     }
 
@@ -113,16 +128,90 @@ figcaption
         border-right:5px solid white;
     }
 
+    .table
+    {
+        padding-top: 90px;
+        width:395px;
+
+    }
+
+    .button
+    {
+        font-size: 40px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .winner
+    {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95px;
+        height: 120px;
+        margin: 12.5px;
+    }
+
+    .icon
+    {
+        width: 160px;
+    }
+
+    .winner .icon
+    {
+        width: 55px;
+    }
+
+    figcaption
+{
+    font-size: 15px;
+    text-align: center;
+}
+
 }
   
 /* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px)
+@media only screen and (min-width: 431px) and (max-width: 1535px)
 {
- 
+
+
 }
   
 /* Desktop Styles */
-@media only screen and (min-width: 961px)
+@media only screen and (min-width: 1536px)
 {
+
+    .scoreC, .scoreH
+    {
+        border-bottom:0;
+        font-size:140px;
+        width:24%;
+    }
+
+    .scoreH
+    {
+        order:1;
+        border-right:10px solid white;
+    }
+
+    .middle
+    {
+        justify-content:space-between;
+    }
+
+    .table
+    {
+        order:2;
+    }
+
+    .icon
+    {
+        width:200px;
+    }
+
+    .scoreC
+    {
+        order:3;
+        border-left: 10px solid white;
+    }
 
 }
