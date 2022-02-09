@@ -38,6 +38,16 @@ figcaption
     font-size: 20px;
 }
 
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:10px solid white;
+    height: 150px;
+    text-align: center;
+}
+
 .icon
 {
     width: 190px;
@@ -74,7 +84,8 @@ figcaption
     justify-content:center;
     flex-wrap:wrap;
     width:790px;
-    padding-top:115px;
+    padding-top:130px;
+    padding-bottom: 135px;
     color:white;
 }
 
@@ -130,7 +141,8 @@ figcaption
 
     .table
     {
-        padding-top: 90px;
+        padding-top:65px;
+        padding-bottom: 67.5px;
         width:395px;
 
     }
@@ -153,7 +165,7 @@ figcaption
 
     .icon
     {
-        width: 160px;
+        width: 105px;
     }
 
     .winner .icon
