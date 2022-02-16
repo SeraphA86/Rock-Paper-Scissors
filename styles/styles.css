@@ -89,7 +89,7 @@ footer
     color:white;
 }
 
-.button
+.button, .winner
 {
     display:flex;
     align-items: center;
@@ -109,6 +109,7 @@ footer
     background-color: black;
     border:none;
     margin:25px;
+    opacity: 0;
 }
 
 .winner .icon

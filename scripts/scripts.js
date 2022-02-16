@@ -40,6 +40,40 @@ function score(scoreH, scoreC, result)
 }
 
 
+/*Changes the images in the 'winnerIcon' class and the image caption, also makes the image visible*/
+function changeImageWinner(path, alt, figcaptionText)
+{
+    /*DOM elements of the central field of images where the winner icon is shown*/
+    const winner = document.querySelector('.winner');
+    const winnerIcon = document.querySelector('.winnerIcon');
+    const figcaption = document.querySelector('figcaption');
+
+    winnerIcon.src = path;/*The path to the image*/
+    winnerIcon.alt = alt;/*Alternative text*/
+    figcaption.textContent = figcaptionText;/*Image caption*/
+    winner.style.opacity = '1';/*Field transparency (By default, the field is transparent)*/
+}
+
+/*Depending on the winner, it changes the image and signature*/
+function winnerDisplay(result)
+{
+
+
+    if (result == 1)
+    {
+        changeImageWinner('images/human.svg','human', 'Human win');
+    }
+    if(result == 0)
+    {
+        changeImageWinner('images/computer.svg', 'computer', 'Computer win');
+    }
+    if(result == -1)
+    {
+        changeImageWinner('images/draw.svg', 'draw', 'Draw');
+    }
+}
+
+
 const signs = document.querySelectorAll('.button');/*NodeList of all game signs*/
 /*Adding listening to each game sign*/
 signs.forEach((button)=>
@@ -58,5 +92,6 @@ signs.forEach((button)=>
         const result = playRound(playerSelection, computerSelection);
 
         score(scoreH, scoreC, result);
+        winnerDisplay(result);
     });
 });
