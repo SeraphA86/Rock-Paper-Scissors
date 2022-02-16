@@ -38,3 +38,25 @@ function score(scoreH, scoreC, result)
         scoreC.textContent = Number(scoreC.textContent) + (result - 1) * (-1);
     }
 }
+
+
+const signs = document.querySelectorAll('.button');/*NodeList of all game signs*/
+/*Adding listening to each game sign*/
+signs.forEach((button)=>
+{
+    button.addEventListener('click', ()=>
+    {
+        /*DOM elements of the invoice field*/
+        const scoreH = document.querySelector('.scoreH');
+        const scoreC = document.querySelector('.scoreC');
+
+        const playerSelection = button.dataset.number;/*the number of the sign selected by the player*/
+        const computerSelection = computerChoice(1, 4);/*the number of the sign selected by the computer*/
+
+        console.log(computerSelection);
+
+        const result = playRound(playerSelection, computerSelection);
+
+        score(scoreH, scoreC, result);
+    });
+});
