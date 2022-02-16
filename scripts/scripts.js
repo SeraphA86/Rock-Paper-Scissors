@@ -13,7 +13,7 @@ except in the case of "paper and stone" (3 - 1 = 2 - paper beats stone).
 If the person wins, the function returns 1, if the draw function returns -1, if the computer wins, the function returns 0.*/
 function playRound(playerSelection, computerSelection)
 {
-    if(playerSelection > computerSelection || (computerSelection - playerSelection) == 2)/*it is determined whether a human has won*/
+    if( (playerSelection > computerSelection || (computerSelection - playerSelection) == 2) && ( (playerSelection - computerSelection) != 2) )/*it is determined whether a human has won*/
     {
         return 1;
     }
