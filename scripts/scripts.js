@@ -41,16 +41,14 @@ function score(scoreH, scoreC, result)
 
 
 /*Changes the images in the 'winnerIcon' class and the image caption, also makes the image visible*/
-function changeImageWinner(path, alt, figcaptionText)
+function changeImageWinner(path, alt)
 {
     /*DOM elements of the central field of images where the winner icon is shown*/
     const winner = document.querySelector('.winner');
     const winnerIcon = document.querySelector('.winnerIcon');
-    const figcaption = document.querySelector('figcaption');
 
     winnerIcon.src = path;/*The path to the image*/
     winnerIcon.alt = alt;/*Alternative text*/
-    figcaption.textContent = figcaptionText;/*Image caption*/
     winner.style.opacity = '1';/*Field transparency (By default, the field is transparent)*/
 }
 
@@ -61,11 +59,11 @@ function winnerDisplay(result)
 
     if (result == 1)
     {
-        changeImageWinner('images/human.svg','human', 'Human win');
+        changeImageWinner('images/human.svg','human');
     }
     if(result == 0)
     {
-        changeImageWinner('images/computer.svg', 'computer', 'Computer win');
+        changeImageWinner('images/computer.svg', 'computer');
     }
     if(result == -1)
     {
