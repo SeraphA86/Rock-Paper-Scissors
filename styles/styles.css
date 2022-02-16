@@ -116,6 +116,10 @@ footer
     width: 100px;
 }
 
+.button :hover
+{
+    border-bottom: 12px solid white;
+}
 
 /* Mobile Styles */
 @media only screen and (max-width: 430px) 
@@ -174,10 +178,15 @@ footer
     }
 
     figcaption
-{
-    font-size: 15px;
-    text-align: center;
-}
+    {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .button :hover
+    {
+        border-bottom: 10px solid white;
+    }
 
 }
   
