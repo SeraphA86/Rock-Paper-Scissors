@@ -38,7 +38,21 @@ function score(scoreH, scoreC, result)
         scoreC.textContent = Number(scoreC.textContent) + (result - 1) * (-1);
     }
 }
-
+/*Delay function.
+The code uses the Date.now method to get the number of milliseconds that have passed since January 1,
+1970 and assigns this value to the date variable.
+It then creates an empty currentDate variable before entering the do...while loop.
+In the loop, it repeatedly gets the number of milliseconds that have passed since January 1,1970,
+and assigns the value of the previously declared currentDate variable.
+The loop will continue as long as the difference between date and current Date is less than the required delay in milliseconds.*/
+function sleep(milliseconds)
+{
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
 
 /*Changes the images in the 'winnerIcon' class , also makes the image visible*/
 function changeImageWinner(path, alt)
@@ -52,10 +66,10 @@ function changeImageWinner(path, alt)
     winner.style.opacity = '1';/*Field transparency (By default, the field is transparent)*/
 }
 
+
 /*Depending on the winner, it changes the image*/
 function winnerDisplay(result)
 {
-
 
     if (result == 1)
     {
@@ -85,11 +99,10 @@ signs.forEach((button)=>
         const playerSelection = button.dataset.number;/*the number of the sign selected by the player*/
         const computerSelection = computerChoice(1, 4);/*the number of the sign selected by the computer*/
 
-        console.log(computerSelection);
-
         const result = playRound(playerSelection, computerSelection);
-
+        sleep(200);
         score(scoreH, scoreC, result);
         winnerDisplay(result);
+
     });
 });
