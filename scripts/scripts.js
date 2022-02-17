@@ -40,7 +40,7 @@ function score(scoreH, scoreC, result)
 }
 
 
-/*Changes the images in the 'winnerIcon' class and the image caption, also makes the image visible*/
+/*Changes the images in the 'winnerIcon' class , also makes the image visible*/
 function changeImageWinner(path, alt)
 {
     /*DOM elements of the central field of images where the winner icon is shown*/
@@ -52,7 +52,7 @@ function changeImageWinner(path, alt)
     winner.style.opacity = '1';/*Field transparency (By default, the field is transparent)*/
 }
 
-/*Depending on the winner, it changes the image and signature*/
+/*Depending on the winner, it changes the image*/
 function winnerDisplay(result)
 {
 
