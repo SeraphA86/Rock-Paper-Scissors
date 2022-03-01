@@ -144,15 +144,27 @@ footer
 {
     header
     {
+        height: 18.5%;
         font-size:40px;
         line-height:1.4;
         word-spacing: 15px;
         border-bottom:5px solid white;
     }
 
+    footer
+    {
+        height: 18.5%;
+        border-top:5px solid white;
+    }
+
+    .middle
+    {
+        height: 63%;
+    }
+
     .scoreC, .scoreH
     {
-        font-size:90px;
+        font-size:60px;
         border-bottom:5px solid white;
     }
 
@@ -165,8 +177,8 @@ footer
     {
         padding-top:65px;
         padding-bottom: 67.5px;
+        margin-top: 45px;
         width:395px;
-
     }
 
     .button
